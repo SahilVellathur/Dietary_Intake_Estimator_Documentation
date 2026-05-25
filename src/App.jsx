@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import Dashboard from './components/Dashboard';
-import Profile from './components/Profile'; // This contains our analytics trends
-import Settings from './components/Settings'; // Our personal settings/details view
-import FoodScanner from './components/FoodScanner';
 import DietaryHistory from './components/DietaryHistory';
+import Profile from './components/Profile';
 import AuthPage from './components/AuthPage';
 import Sidebar from './components/Sidebar';
 import { patients as initialPatients } from './data/dummyData';
@@ -100,20 +98,11 @@ function App() {
             onResetMeals={handleResetMeals}
           />
         );
-      case 'scanner':
-        return (
-          <FoodScanner
-            onLogCalories={handleLogCalories}
-          />
-        );
       case 'history':
         return <DietaryHistory />;
-      case 'analytics':
-        return <Profile />;
       case 'reports':
-      case 'profile':
         return (
-          <Settings
+          <Profile
             setIsLogin={setIsLogin}
           />
         );

@@ -1,2 +1,2 @@
-import Analytics from '../pages/Analytics';
-export default Analytics;
+import Reports from '../pages/Reports';
+export default Reports;

@@ -1,14 +1,12 @@
 import React from 'react';
-import { Home, LineChart, UserCheck, History, Camera } from 'lucide-react';
+import { Home, History, User } from 'lucide-react';
 
 export default function Sidebar({ activePage, setActivePage }) {
   // Navigation elements - Re-branded for personal dietary tracking
   const navItems = [
     { id: 'dashboard', label: 'Dashboard', icon: Home },
-    { id: 'scanner', label: 'AI Plate Scanner', icon: Camera },
     { id: 'history', label: 'Intake History Journal', icon: History },
-    { id: 'analytics', label: 'Intake Analytics', icon: LineChart },
-    { id: 'reports', label: 'Personal Profile', icon: UserCheck },
+    { id: 'reports', label: 'Personal Profile', icon: User },
   ];
 
   return (

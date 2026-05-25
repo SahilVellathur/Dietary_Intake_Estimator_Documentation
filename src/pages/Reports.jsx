@@ -103,10 +103,6 @@ export default function Reports({ setIsLogin }) {
 
           <div className="w-full border-t border-slate-100 mt-6 pt-4 space-y-3">
             <div className="flex justify-between text-sm">
-              <span className="text-slate-400 font-medium">Daily Calorie Target</span>
-              <span className="font-bold text-slate-700">{profileData.dailyCalorieGoal} kcal</span>
-            </div>
-            <div className="flex justify-between text-sm">
               <span className="text-slate-400 font-medium">Physician BMI Ratio</span>
               <span className="font-bold text-slate-700">{bmi} ({bmiCat.label})</span>
             </div>
@@ -121,7 +117,7 @@ export default function Reports({ setIsLogin }) {
               <p className="text-xs text-slate-400 font-medium mt-0.5">Customize daily nutrition goals and personal body index settings.</p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 gap-4">
               <div className="space-y-1.5">
                 <label className="text-[10px] font-bold text-slate-400 uppercase tracking-wide">Full Name</label>
                 <input
@@ -133,67 +129,18 @@ export default function Reports({ setIsLogin }) {
                   required
                 />
               </div>
-
-              <div className="space-y-1.5">
-                <label className="text-[10px] font-bold text-slate-400 uppercase tracking-wide">Email</label>
-                <input
-                  type="email"
-                  name="email"
-                  value={profileData.email}
-                  onChange={handleChange}
-                  className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-xs text-slate-800 font-semibold focus:outline-none"
-                  required
-                />
-              </div>
-
-              <div className="space-y-1.5">
-                <label className="text-[10px] font-bold text-slate-400 uppercase tracking-wide">Age</label>
-                <input
-                  type="number"
-                  name="age"
-                  value={profileData.age}
-                  onChange={handleChange}
-                  className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-xs text-slate-800 font-semibold focus:outline-none"
-                  required
-                />
-              </div>
-
-              <div className="space-y-1.5">
-                <label className="text-[10px] font-bold text-slate-400 uppercase tracking-wide">Height (cm)</label>
-                <input
-                  type="number"
-                  name="height"
-                  value={profileData.height}
-                  onChange={handleChange}
-                  className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-xs text-slate-800 font-semibold focus:outline-none"
-                  required
-                />
-              </div>
-
-              <div className="space-y-1.5">
-                <label className="text-[10px] font-bold text-slate-400 uppercase tracking-wide">Weight (kg)</label>
-                <input
-                  type="number"
-                  name="weight"
-                  value={profileData.weight}
-                  onChange={handleChange}
-                  className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-xs text-slate-800 font-semibold focus:outline-none"
-                  required
-                />
-              </div>
-
-              <div className="space-y-1.5">
-                <label className="text-[10px] font-bold text-slate-400 uppercase tracking-wide">Daily Calorie Target (kcal)</label>
-                <input
-                  type="number"
-                  name="dailyCalorieGoal"
-                  value={profileData.dailyCalorieGoal}
-                  onChange={handleChange}
-                  className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-xs text-slate-800 font-semibold focus:outline-none"
-                  required
-                />
-              </div>
-            </div>
+            <div className="space-y-1.5">
+  <label className="text-[10px] font-bold text-slate-400 uppercase tracking-wide">Email</label>
+  <input
+    type="email"
+    name="email"
+    value={profileData.email}
+    onChange={handleChange}
+    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-xs text-slate-800 font-semibold focus:outline-none"
+    required
+  />
+</div>
+</div>
 
             <div className="flex justify-end pt-3 border-t border-slate-50">
               <button
